@@ -4,6 +4,6 @@ Rscript -e 'deps <- devtools::dev_package_deps(dependencies = NA);devtools::inst
 
 R CMD build  .
 
-R CMD check "${PKG_TARBALL}" --as-cran --no-manual --no-manual --no-manual --no-manual; CHECK_RET=$?
+R CMD check *.tar.gz --as-cran --no-manual --no-manual --no-manual --no-manual; 
 
 Rscript -e 'covr::package_coverage()'
